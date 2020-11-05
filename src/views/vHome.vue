@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <vSlider></vSlider>
-    <div class="container">
+    <div class="container mb-5">
       <h1 class="text-center mt-4">Каталог</h1>
       <div class="d-flex flex-wrap justify-content-around">
         <div class="card mt-5" style="width: 18rem;" v-for="(card, id) in VIEW_PRODUCT_CARD" :key="id">

@@ -5,7 +5,9 @@
       <div>
         <span class="price" style="color:black"></span>
         <div v-for="(prod, id) in VIEW_CART" :key="id">
-          <p>{{id+1}}) {{prod.name}} <span class="badge bg-secondary">{{prod.quantity}}</span><span class="price">{{prod.price}}₽</span></p> <hr>
+          <div class="">
+            <p>{{id+1}}) {{prod.name}} <span class="badge bg-secondary">{{prod.quantity}}</span><span class="price">{{prod.price}}₽<button @click="minus(id)" style="width: 40px; height: 40px;" type="button" class="btn btn-outline-danger ml-4">-</button></span></p>
+          </div> <hr>
         </div>
         <p><b>Всего:</b> <span class="price" style="color:black"><b>{{totalPrice}}₽</b></span></p>
         <button @click="delOrder()" type="button" class="btn btn-outline-danger">Очистить</button>
@@ -293,6 +295,9 @@ export default {
     },
     delOrder: function() {
       this.$store.commit('SET_DEL_PROD_IN_CART')
+    },
+    minus: function(id) {
+      this.VIEW_CART.splice(id, 1)
     }
   },
   computed: {
