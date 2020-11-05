@@ -1,5 +1,8 @@
 <template>
   <div class="home">
+    <div v-if="alert" class="alert alert-success fixed-top" role="alert">
+      Товар успешно добавлен в корзину
+    </div>
     <vSlider></vSlider>
     <div class="container mb-5">
       <h1 class="text-center mt-4">Каталог</h1>
@@ -53,7 +56,7 @@ export default {
   },
   data: function() {
     return {
-      
+      alert: false
     }
   },
   methods: {
@@ -71,10 +74,15 @@ export default {
         this.VIEW_PRODUCT_CARD[id].quantity--
       }
     },
+    alertFalse: function() {
+      this.alert = false
+    },
     inCart: function(id) {
       this.$store.commit('SET_PROD_IN_CART', this.VIEW_PRODUCT_CARD[id])
       //this.VIEW_PRODUCT_CARD[id].price = this.VIEW_PRODUCT_CARD[id].fixedPrice
       //this.VIEW_PRODUCT_CARD[id].quantity = 1
+      this.alert = true
+      setTimeout(this.alertFalse, 3000)
     }
   },
   computed: {
