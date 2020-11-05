@@ -38,6 +38,7 @@ export default {
         localStorage.setItem('localEmail', response.data.username)
         localStorage.setItem('localPass', this.pass)
         localStorage.setItem('localName', response.data.name)
+        location.href = '/'
       }).catch((e) => {
         console.log('ОШИБКА: ' + e)
       })

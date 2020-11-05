@@ -101,6 +101,7 @@ export default {
           }
         }).then((res) => {
           this.$store.commit('TEST_2_CART', {amount: this.totalPrice, address: this.address, products: this.VIEW_CART})
+          location.href = '/profile'
         }).catch((e) => {
           console.log("Ошибка: " + e)
         })
@@ -124,6 +125,7 @@ export default {
           }
         }).then((res) => {
           this.$store.commit('TEST_2_CART', {amount: this.totalPrice, address: this.address, products: this.VIEW_CART})
+          location.href = '/profile'
         }).catch((e) => {
           console.log("Ошибка: " + e)
         })
@@ -147,6 +149,7 @@ export default {
           }
         }).then((res) => {
           this.$store.commit('TEST_2_CART', {amount: this.totalPrice, address: this.address, products: this.VIEW_CART})
+          location.href = '/profile'
         }).catch((e) => {
           console.log("Ошибка: " + e)
         })
@@ -170,6 +173,7 @@ export default {
           }
         }).then((res) => {
           this.$store.commit('TEST_2_CART', {amount: this.totalPrice, address: this.address, products: this.VIEW_CART})
+          location.href = '/profile'
         }).catch((e) => {
           console.log("Ошибка: " + e)
         })
@@ -193,6 +197,7 @@ export default {
           }
         }).then((res) => {
           this.$store.commit('TEST_2_CART', {amount: this.totalPrice, address: this.address, products: this.VIEW_CART})
+          location.href = '/profile'
         }).catch((e) => {
           console.log("Ошибка: " + e)
         })
@@ -216,6 +221,7 @@ export default {
           }
         }).then((res) => {
           this.$store.commit('TEST_2_CART', {amount: this.totalPrice, address: this.address, products: this.VIEW_CART})
+          location.href = '/profile'
         }).catch((e) => {
           console.log("Ошибка: " + e)
         })
@@ -273,6 +279,7 @@ export default {
       }).then((res) => {
         console.log(res)
         this.$store.commit('TEST_2_CART', {amount: this.totalPrice, address: this.address, products: this.VIEW_CART})
+        location.href = '/profile'
       }).catch((e) => {
         console.log("Ошибка: " + e)
       })

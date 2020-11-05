@@ -36,7 +36,7 @@ export default {
         password: this.pass,
         name: this.name
       }).then((res) => {
-        //location.href = 'sign'
+        location.href = 'sign'
         console.log(res.data)
       }).catch((e) => {
         console.log('ОШИБКА: ' + e)
