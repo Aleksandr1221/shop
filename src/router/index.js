@@ -33,6 +33,11 @@ const routes = [
     path: '/admin',
     name: 'Admin',
     component: () => import('../views/vAdmin.vue')
+  },
+  {
+    path: '/adminform',
+    name: 'Admin Form',
+    component: () => import('../views/vAdminForm.vue')
   }
 ]
 
